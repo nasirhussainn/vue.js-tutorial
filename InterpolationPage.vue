@@ -8,7 +8,12 @@
         <h3>Qualification = {{ q }}</h3>
         <!-- if you want dynamic qualification then use method and set it as a prop or v--->
         <!-- <h2>All Data = {{getData().contactNo}}</h2> -->
-        <h3>New Data = {{ getData() }}</h3>
+        <button v-on:dblclick="test()">DClick Restart</button>
+        <!-- can pass param as well -->
+        <!-- <h3 v-on:mouseover="countfunc()">Count Me{{countfunc()}}</h3> -->
+        <button v-on:click="countfunc()">Count Me</button>
+        <h2>{{ count }}</h2>
+
 
     </div>
 </template>
@@ -21,8 +26,11 @@ export default {
             q: "B.Tech",
             getName: function () {
                 return "Nasir Hussain"
-            }
+            },
+            count: 1
         }
+        
+
     },
     methods: {
         getData() {
@@ -32,6 +40,13 @@ export default {
                 ContactNo:3354913900
 
             }
+        },
+        test(){
+            this.count=0
+            
+        },
+        countfunc(){
+            this.count=this.count+1;
         }
     }
 }
