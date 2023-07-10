@@ -12,7 +12,11 @@
         <!-- can pass param as well -->
         <!-- <h3 v-on:mouseover="countfunc()">Count Me{{countfunc()}}</h3> -->
         <button v-on:click="countfunc()">Count Me</button>
+        <input type="number" v-model="count">
         <h2>{{ count }}</h2>
+        <!-- using two way binding for input field so that when user types on screen its reflected back into-->
+
+        <!-- two way binding model (template) and view (script) change value simultaneously -->
 
 
     </div>
