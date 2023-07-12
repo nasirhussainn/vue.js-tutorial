@@ -18,6 +18,10 @@
 
         <!-- two way binding model (template) and view (script) change value simultaneously -->
 
+        <input type="text" v-model="email"/>
+        <button v-on:click="setData()" type="button">Set</button>
+        <!-- getting value from user and set to variable -->
+
 
     </div>
 </template>
@@ -31,7 +35,8 @@ export default {
             getName: function () {
                 return "Nasir Hussain"
             },
-            count: 1
+            count: 1,
+            email:null
         }
         
 
@@ -44,6 +49,10 @@ export default {
                 ContactNo:3354913900
 
             }
+        },
+        setData(){
+            alert(this.email);
+
         },
         test(){
             this.count=0
