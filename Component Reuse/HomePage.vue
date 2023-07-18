@@ -1,5 +1,7 @@
 <template>
     <h1>Reuse of Compononets</h1>
+    <div v-html="myfName + mylName"></div> 
+    <!-- html binding 2-way binding -->
     <div class="container">
         <ul>
             <li v-for="item in user" :key="item">
@@ -28,7 +30,9 @@ export default {
                 { name: "Yasir", email: "yasir@g.com" },
                 { name: "Basir", email: "basir@g.com" },
                 { name: "Qasir", email: "qasir@g.com" },
-            ]
+            ],
+            myfName:"<h5>Nasir</h5>",
+            mylName:"<h5>Hussain</h5>",
         }
     },
   
